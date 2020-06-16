@@ -18,13 +18,14 @@ public class Main extends JFrame implements ActionListener, MouseListener, Windo
 	private JButton blueButton = new JButton("blue");
 	private JButton undoButton = new JButton("undo");
 	private JButton redoButton = new JButton("redo");
+	private Color color = Color.red;
 	public Main(String title) {
 		super(title);
 		
 		this.addWindowListener(this);
 		canvas.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
-				Command cmd = new DrawCommand(canvas,e.getPoint()); //마우스 드래그 이벤트가 발생시 400*400 사이즈의 
+				Command cmd = new DrawCommand(canvas,e.getPoint(),color); //마우스 드래그 이벤트가 발생시 400*400 사이즈의 
 				history.append(cmd);
 				cmd.execute();
 			}
@@ -71,14 +72,17 @@ public class Main extends JFrame implements ActionListener, MouseListener, Windo
 			canvas.paint(getGraphics());
 			
 		}else if(e.getSource()==redButton) {
+			color = Color.red;
 			Command cmd = new ColorCommand(canvas, Color.red);
 			history.append(cmd);
 			cmd.execute();
 		}else if(e.getSource()==greenButton) {
+			color = Color.green;
 			Command cmd = new ColorCommand(canvas, Color.green);
 			history.append(cmd);
 			cmd.execute();
 		}else if(e.getSource()==blueButton) {
+			color = Color.blue;
 			Command cmd = new ColorCommand(canvas, Color.blue);
 			history.append(cmd);
 			cmd.execute();

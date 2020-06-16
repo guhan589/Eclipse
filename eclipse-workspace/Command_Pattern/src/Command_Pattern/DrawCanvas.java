@@ -19,7 +19,7 @@ public class DrawCanvas extends Canvas implements Drawable{
 		history.execute(); //MacroCommand
 	}
 	@Override
-	public void draw(int x, int y) {
+	public void draw(int x, int y,Color color) {
 		Graphics g = getGraphics();
 		g.setColor(color);
 		g.fillOval(x-radius, y-radius, radius*2, radius*2);
