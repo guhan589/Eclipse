@@ -16,7 +16,7 @@ public class DrawCanvas extends Canvas implements Drawable{
 		init();
 	}
 	public void paint(Graphics g) {
-		history.execute();
+		history.execute(); //MacroCommand
 	}
 	@Override
 	public void draw(int x, int y) {

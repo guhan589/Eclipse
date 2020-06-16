@@ -8,6 +8,7 @@ public class MacroCommand implements Command{
 	private Stack redoCommands = new Stack();
 	@Override
 	public void execute() {
+		System.out.println("exeucte");
 		Iterator it = commands.iterator();
 		while(it.hasNext()) {
 			((Command)it.next()).execute();
