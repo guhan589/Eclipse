@@ -1,0 +1,2 @@
+module AbstractFactory_Pattern {
+}

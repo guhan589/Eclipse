@@ -1,0 +1,2 @@
+module Facada_Patterns {
+}

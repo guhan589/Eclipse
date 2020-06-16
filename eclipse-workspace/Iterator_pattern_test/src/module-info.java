@@ -1,0 +1,2 @@
+module Iterator_pattern {
+}

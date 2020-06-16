@@ -1,0 +1,2 @@
+module Mediator_Patterns {
+}

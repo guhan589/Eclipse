@@ -1,0 +1,2 @@
+module Adapter_Patterns {
+}
